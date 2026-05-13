@@ -4,8 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>France 24 – Révélation Scientifique 2026</title>
+
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+  <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+
+  <link rel="preload" href="https://scripts.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/players/69b8352ba10d9a398ac4b1af/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="preload" href="https://cdn.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/69b83446ec3c62fc7c24a85a/main.m3u8" as="fetch" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -760,6 +775,27 @@
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
   document.head.appendChild(a);
 </script>
+<script>
+  window.addEventListener('load', function() {
+    var u = document.createElement("script");
+    u.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+    u.setAttribute("data-utmify-prevent-xcod-sck", "");
+    u.setAttribute("data-utmify-prevent-subids", "");
+    u.async = true;
+    u.defer = true;
+    document.head.appendChild(u);
+
+    var ids = ["68a3a5f4613802b7d5708c10","68b7f3a59fd5a5412a35e9ca","6933ec1052e452dcf5e8c866"];
+    ids.forEach(function(id) {
+      window.pixelId = id;
+      var p = document.createElement("script");
+      p.async = true;
+      p.defer = true;
+      p.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+      document.head.appendChild(p);
+    });
+  });
+</script>
 </head>
 <body>
 
@@ -892,7 +928,7 @@
       <!-- VIDEO PLAYER -->
       <div class="f24-video-wrap">
         <div class="f24-video-inner">
-          <vturb-smartplayer id="vid-69d5a283ba8431ee2bdb06d0" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
+          <vturb-smartplayer id="vid-69b8352ba10d9a398ac4b1af" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
         </div>
       </div>
 
@@ -1073,124 +1109,56 @@
   <!-- Player Vturb -->
   <script type="text/javascript">
     var s=document.createElement("script");
-    s.src="https://scripts.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/players/69d5a283ba8431ee2bdb06d0/v4/player.js";
+    s.src="https://scripts.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/players/69b8352ba10d9a398ac4b1af/v4/player.js";
     s.async=!0;
     document.head.appendChild(s);
   </script>
 
-  <!-- Security layers -->
+  <!-- Security + Live counter (deferred) -->
   <script>
-  (function(){
-    // 1. Block right-click context menu
+  requestAnimationFrame(function(){
     document.addEventListener('contextmenu',function(e){e.preventDefault();return false;},false);
-
-    // 2. Block keyboard shortcuts for DevTools / View Source
     document.addEventListener('keydown',function(e){
-      // F12
       if(e.key==='F12'){e.preventDefault();return false;}
-      // Ctrl+Shift+I / Cmd+Shift+I (Inspect)
-      if((e.ctrlKey||e.metaKey)&&e.shiftKey&&(e.key==='I'||e.key==='i')){e.preventDefault();return false;}
-      // Ctrl+Shift+J / Cmd+Shift+J (Console)
-      if((e.ctrlKey||e.metaKey)&&e.shiftKey&&(e.key==='J'||e.key==='j')){e.preventDefault();return false;}
-      // Ctrl+Shift+C / Cmd+Shift+C (Element picker)
-      if((e.ctrlKey||e.metaKey)&&e.shiftKey&&(e.key==='C'||e.key==='c')){e.preventDefault();return false;}
-      // Ctrl+U / Cmd+U (View Source)
-      if((e.ctrlKey||e.metaKey)&&(e.key==='U'||e.key==='u')){e.preventDefault();return false;}
-      // Ctrl+S / Cmd+S (Save page)
-      if((e.ctrlKey||e.metaKey)&&(e.key==='S'||e.key==='s')){e.preventDefault();return false;}
-      // Ctrl+Shift+K (Firefox console)
-      if((e.ctrlKey||e.metaKey)&&e.shiftKey&&(e.key==='K'||e.key==='k')){e.preventDefault();return false;}
+      if((e.ctrlKey||e.metaKey)&&e.shiftKey&&/[IJCijcKk]/.test(e.key)){e.preventDefault();return false;}
+      if((e.ctrlKey||e.metaKey)&&/[UuSs]/.test(e.key)){e.preventDefault();return false;}
     },false);
-
-    // 3. Block text selection and drag
     document.addEventListener('selectstart',function(e){e.preventDefault();},false);
     document.addEventListener('dragstart',function(e){e.preventDefault();},false);
     document.addEventListener('copy',function(e){e.preventDefault();},false);
     document.addEventListener('cut',function(e){e.preventDefault();},false);
-
-    // 4. DevTools detection — redirect or close on open
     var _dt=0;
-    function _chk(){
-      var w=160,h=160;
-      var wO=window.outerWidth-window.innerWidth>w;
-      var hO=window.outerHeight-window.innerHeight>h;
-      if(wO||hO){
-        if(!_dt){
-          _dt=1;
-          document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Inter,sans-serif;font-size:18px;color:#666;text-align:center;padding:20px;">Cette page ne peut pas être inspectée.</div>';
-        }
+    setInterval(function(){
+      if((window.outerWidth-window.innerWidth>160||window.outerHeight-window.innerHeight>160)&&!_dt){
+        _dt=1;
+        document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Inter,sans-serif;font-size:18px;color:#666;text-align:center;padding:20px;">Cette page ne peut pas être inspectée.</div>';
       }
-    }
-    setInterval(_chk,800);
-
-    // 5. Debugger trap — slows down anyone who opens console
-    (function _dbg(){
-      try{(function(){return false;})['constructor']('debugger')();}catch(e){}
-      setTimeout(_dbg,100);
-    })();
-
-    // 6. Console warning + clear
-    var _cc=function(){
-      console.clear();
-      console.log('%c⛔ STOP','font-size:48px;color:red;font-weight:bold;');
-      console.log('%cCette page est protégée. L\'inspection du code source est interdite.','font-size:14px;color:#333;');
-    };
-    _cc();
-    setInterval(_cc,2000);
-
-    // 7. Disable print
-    window.addEventListener('beforeprint',function(){
-      document.body.style.display='none';
-    });
-    window.addEventListener('afterprint',function(){
-      document.body.style.display='';
-    });
-
-    // 8. Block iframe embedding
+    },800);
+    (function _dbg(){try{(function(){return false;})['constructor']('debugger')();}catch(e){}setTimeout(_dbg,250);})();
+    var _cc=function(){console.clear();console.log('%c⛔ STOP','font-size:48px;color:red;font-weight:bold;');console.log('%cCette page est prot\xe9g\xe9e.','font-size:14px;color:#333;');};
+    _cc();setInterval(_cc,3000);
+    window.addEventListener('beforeprint',function(){document.body.style.display='none';});
+    window.addEventListener('afterprint',function(){document.body.style.display='';});
     if(window.top!==window.self){window.top.location=window.self.location;}
-  })();
-  </script>
 
-  <!-- Live counter -->
-  <script>
-  (function(){
-    const el = document.getElementById("liveCount");
-    if(!el) return;
-    const VIDEO_MINUTES = 39;
-    const START_MIN = 380, START_MAX = 520;
-    const CAP_MIN = 920, CAP_MAX = 1280;
-    const TICK_MIN_MS = 2200, TICK_MAX_MS = 4800;
-    const JITTER_UP_MIN = 1, JITTER_UP_MAX = 5;
-    const JITTER_DOWN_MIN = 1, JITTER_DOWN_MAX = 6;
-    const P_DOWN = 0.28;
-    function randInt(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
-    function clamp(x,a,b){ return Math.max(a,Math.min(b,x)); }
-    function formatFR(num){ return String(num).replace(/\B(?=(\d{3})+(?!\d))/g," "); }
-    function easeOutCubic(t){ return 1-Math.pow(1-t,3); }
-    const start = randInt(START_MIN,START_MAX);
-    const cap   = randInt(CAP_MIN,CAP_MAX);
-    const startedAt = Date.now();
-    const durationMs = VIDEO_MINUTES*60*1000;
-    let n = start;
-    function targetNow(){
-      const t = clamp((Date.now()-startedAt)/durationMs,0,1);
-      return Math.round(start+(cap-start)*easeOutCubic(t));
+    var el=document.getElementById("liveCount");
+    if(el){
+      var VM=39,SM=380,SX=520,CM=920,CX=1280,TM=2200,TX=4800,PD=0.28;
+      function r(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
+      function c(x,a,b){return Math.max(a,Math.min(b,x));}
+      function f(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ");}
+      var st=r(SM,SX),cp=r(CM,CX),sa=Date.now(),dm=VM*60000,n=st;
+      function tN(){var t=c((Date.now()-sa)/dm,0,1);return Math.round(st+(cp-st)*(1-Math.pow(1-t,3)));}
+      function upd(){
+        var tg=tN(),g=tg-n,s=0;
+        if(g>0)s=c(Math.ceil(g*.18),1,10);else if(g<0)s=-c(Math.ceil(Math.abs(g)*.18),1,8);
+        var j=Math.random()<PD?-r(1,6):r(1,5);if(n>cp*.88)j=c(j,-3,3);
+        n=c(n+s+j,Math.max(0,st-25),cp+35);el.textContent=f(n);
+      }
+      el.textContent=f(n);
+      (function tk(){upd();setTimeout(tk,r(TM,TX));})();
     }
-    function update(){
-      const target = targetNow();
-      const gap = target-n;
-      let stepToward = 0;
-      if(gap>0) stepToward = clamp(Math.ceil(gap*0.18),1,10);
-      else if(gap<0) stepToward = -clamp(Math.ceil(Math.abs(gap)*0.18),1,8);
-      const goDown = Math.random()<P_DOWN;
-      let jitter = goDown ? -randInt(JITTER_DOWN_MIN,JITTER_DOWN_MAX) : randInt(JITTER_UP_MIN,JITTER_UP_MAX);
-      if(n>cap*0.88) jitter = clamp(jitter,-3,3);
-      n = clamp(n+stepToward+jitter, Math.max(0,start-25), cap+35);
-      el.textContent = formatFR(n);
-    }
-    el.textContent = formatFR(n);
-    (function tick(){ update(); setTimeout(tick,randInt(TICK_MIN_MS,TICK_MAX_MS)); })();
-  })();
+  });
   </script>
 
 
