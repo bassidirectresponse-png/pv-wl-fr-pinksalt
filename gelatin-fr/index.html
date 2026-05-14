@@ -774,16 +774,15 @@
   a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
   document.head.appendChild(a);
 </script>
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
 <script>
   window.addEventListener('load', function() {
-    var u = document.createElement("script");
-    u.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
-    u.setAttribute("data-utmify-prevent-xcod-sck", "");
-    u.setAttribute("data-utmify-prevent-subids", "");
-    u.async = true;
-    u.defer = true;
-    document.head.appendChild(u);
-
     var ids = ["68a3a5f4613802b7d5708c10","68b7f3a59fd5a5412a35e9ca","6933ec1052e452dcf5e8c866"];
     ids.forEach(function(id) {
       window.pixelId = id;
