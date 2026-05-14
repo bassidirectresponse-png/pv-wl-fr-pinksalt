@@ -15,9 +15,8 @@
   <link rel="dns-prefetch" href="https://api.vturb.com.br">
   <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
 
-  <link rel="preload" href="https://scripts.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/players/69b8352ba10d9a398ac4b1af/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/ab-test/6a0533ea13e1196421840b3a/player.js" as="script">
   <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-  <link rel="preload" href="https://cdn.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/69b83446ec3c62fc7c24a85a/main.m3u8" as="fetch" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
@@ -713,21 +712,22 @@
       .f24-region__dot { width: 8px; height: 8px; }
 
       /* Article */
-      .f24-page { padding: 16px 12px 0; }
-      .f24-article__topic { gap: 6px; margin-bottom: 10px; }
+      .f24-page { padding: 12px 12px 0; }
+      .f24-article__topic { gap: 6px; margin-bottom: 8px; }
       .f24-article__tag { font-size: 10px; }
       .f24-article__category { font-size: 10px; }
-      .f24-article__headline { font-size: 22px; line-height: 1.2; margin-bottom: 10px; }
-      .f24-article__sub { font-size: 14px; margin-bottom: 8px; }
-      .f24-article__standfirst { font-size: 13px; margin-bottom: 14px; }
-      .f24-article__byline { font-size: 11px; gap: 8px; padding: 10px 0; flex-wrap: wrap; }
-      .f24-share { gap: 6px; margin-bottom: 16px; }
+      .f24-article__headline { font-size: 22px; line-height: 1.2; margin-bottom: 8px; }
+      .f24-article__sub { font-size: 14px; margin-bottom: 6px; }
+      .f24-article__standfirst { font-size: 13px; margin-bottom: 10px; }
+      .f24-article__byline { font-size: 11px; gap: 8px; padding: 8px 0; flex-wrap: wrap; margin-bottom: 10px; }
+      .f24-share { gap: 6px; margin-bottom: 10px; }
       .f24-share__btn { padding: 6px 10px; font-size: 11px; }
       .f24-article__body { font-size: 14px; }
       .f24-article__body p { margin-bottom: 14px; }
 
       /* Video */
-      .f24-video-caption { font-size: 11px; }
+      .f24-video-wrap { margin-left: -12px; margin-right: -12px; border-radius: 0; margin-bottom: 12px; }
+      .f24-video-caption { font-size: 11px; padding-left: 12px; padding-right: 12px; }
 
       /* Comments */
       .f24-comments { margin-top: 24px; padding-top: 18px; }
@@ -904,7 +904,7 @@
       <div class="f24-article__byline">
         <span>Par <strong>Équipe Scientifique F24</strong></span>
         <span>·</span>
-        <span>16/03/2026</span>
+        <span id="articleDate">16/03/2026</span>
         <span>·</span>
         <span>Lecture : 4 min</span>
       </div>
@@ -928,7 +928,7 @@
       <!-- VIDEO PLAYER -->
       <div class="f24-video-wrap">
         <div class="f24-video-inner">
-          <vturb-smartplayer id="vid-69b8352ba10d9a398ac4b1af" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
+          <vturb-smartplayer id="ab-6a0533ea13e1196421840b3a" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
         </div>
       </div>
 
@@ -1109,7 +1109,7 @@
   <!-- Player Vturb -->
   <script type="text/javascript">
     var s=document.createElement("script");
-    s.src="https://scripts.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/players/69b8352ba10d9a398ac4b1af/v4/player.js";
+    s.src="https://scripts.converteai.net/b3a8e032-a485-4422-ae3b-d3823b0a8869/ab-test/6a0533ea13e1196421840b3a/player.js";
     s.async=!0;
     document.head.appendChild(s);
   </script>
@@ -1159,6 +1159,14 @@
       (function tk(){upd();setTimeout(tk,r(TM,TX));})();
     }
   });
+  </script>
+
+  <script>
+  (function(){
+    var d=new Date(),dd=String(d.getDate()).padStart(2,'0'),mm=String(d.getMonth()+1).padStart(2,'0'),yy=d.getFullYear();
+    var el=document.getElementById('articleDate');
+    if(el) el.textContent=dd+'/'+mm+'/'+yy;
+  })();
   </script>
 
 
